@@ -1,6 +1,7 @@
 package com.example.myexchange;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +9,9 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.myexchange.SecondActivity;
@@ -20,6 +23,14 @@ import com.kakao.usermgmt.UserManagement;
 import com.kakao.usermgmt.callback.MeResponseCallback;
 import com.kakao.usermgmt.response.model.UserProfile;
 import com.kakao.util.exception.KakaoException;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.StringTokenizer;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "";
@@ -48,13 +59,16 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
                 startActivityForResult(intent, 0);
             }
         });
+
         callback = new SessionCallback();
         Session.getCurrentSession().addCallback(callback);
-    }
+
+    } //onCreate
 
     class SessionCallback implements ISessionCallback {
 

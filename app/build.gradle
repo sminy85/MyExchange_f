@@ -33,4 +33,5 @@ dependencies {
 
     implementation group: project.KAKAO_SDK_GROUP, name: 'usermgmt',
             version: project.KAKAO_SDK_VERSION
+    implementation 'com.hynnet:jxl:2.6.12.1'
 }
