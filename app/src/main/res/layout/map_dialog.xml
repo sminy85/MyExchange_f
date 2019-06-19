@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="국가 : "
+            android:textSize="30dp" />
+        <TextView
+            android:id="@+id/d_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="국가"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="통화 : "
+            android:textSize="30dp" />
+        <TextView
+            android:id="@+id/d_currency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="통화"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="환율 : "
+            android:textSize="30dp" />
+        <TextView
+            android:id="@+id/d_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="환율"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+</LinearLayout>

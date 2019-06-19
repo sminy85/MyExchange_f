@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyExchange</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="kakao_app_key">4aafbffe8646c61ee28a61568d10a3a3</string>
+</resources>
